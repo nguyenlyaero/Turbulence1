@@ -22,7 +22,7 @@ for k1= 0:Mx
         for k3=-Mz:Mz
             k = sqrt(k1^2+k2^2+k3^2) ;
             if k > 0
-                E = C_vk*(k.^4)./((1 + k.^2).^(17/6));
+                E = C_vk*(k.^4)./((1 + k.^2).^(17/6)).*exp(-5.2.*k.*0.0245);
                 phi = rand(1,3)*2*pi ;
                 a = sqrt( E/(2*pi*k^2) ) * exp(1i*phi(1)) * cos(phi(3)) ;
                 b = sqrt( E/(2*pi*k^2) ) * exp(1i*phi(2)) * sin(phi(3)) ;
